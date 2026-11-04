@@ -1,0 +1,17 @@
+(kicad_sch
+(version 20260306)
+(generator "eeschema")
+(generator_version "10.0")
+(uuid c262efda-20ee-415b-accb-05175fd5951d)
+(paper "A4")
+(title_block (title "Pressure Taps") (date "2026-11-04") (rev "A") (company "ArtTU") (comment 1 "16-channel aero pressure tap CAN board"))
+(lib_symbols
+
+)
+
+(sheet (at 40 60) (size 60 40) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (stroke (width 0.1524) (type solid)) (fill (color 0 0 0 0)) (uuid 3adc075f-a0af-40ca-ae4c-c4f8144ec415) (property "Sheetname" "MCU" (at 40 59.2 0) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "MCU.kicad_sch" (at 40 100.6 0) (effects (font (size 1.27 1.27)) (justify left top))) (instances (project "PressureTaps" (path "/c262efda-20ee-415b-accb-05175fd5951d" (page "2")))))
+(sheet (at 130 60) (size 60 40) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (stroke (width 0.1524) (type solid)) (fill (color 0 0 0 0)) (uuid 86c12747-e16b-449f-901b-ec5cd2530171) (property "Sheetname" "Power + CAN" (at 130 59.2 0) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "Power_CAN.kicad_sch" (at 130 100.6 0) (effects (font (size 1.27 1.27)) (justify left top))) (instances (project "PressureTaps" (path "/c262efda-20ee-415b-accb-05175fd5951d" (page "3")))))
+(sheet (at 220 60) (size 60 40) (exclude_from_sim no) (in_bom yes) (on_board yes) (dnp no) (stroke (width 0.1524) (type solid)) (fill (color 0 0 0 0)) (uuid f189043e-9d5b-4bd9-9486-60f3d5d74cf4) (property "Sheetname" "Sensors" (at 220 59.2 0) (effects (font (size 1.27 1.27)) (justify left bottom))) (property "Sheetfile" "Sensors.kicad_sch" (at 220 100.6 0) (effects (font (size 1.27 1.27)) (justify left top))) (instances (project "PressureTaps" (path "/c262efda-20ee-415b-accb-05175fd5951d" (page "4")))))
+(sheet_instances (path "/" (page "1")))
+(embedded_fonts no)
+)

@@ -1,0 +1,5 @@
+(version 1)
+(rule "board clearance"
+  (constraint clearance (min 0.127mm)))
+(rule "board track"
+  (constraint track_width (min 0.15mm)))
