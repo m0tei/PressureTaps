@@ -11,7 +11,7 @@ Parts
   Case:       top and bottom halves. The tube block spigot presses through the bottom-half window.
 
 Seals
-  Chambers:   glue on the cover walls and the tube block grid, 0.15 mm glue gap.
+  Chambers:   glue on the cover walls and the tube block grid, clamped flat on the PCB by the screws.
   Window:     1.5 mm silicone cord in the spigot groove, a radial seal, so it needs no clamping.
   Cover:      a second 1.5 mm cord on the cover spigot seals into a blind socket under the lid.
               No opening goes through the lid, and the seal puts no load on the lid.
@@ -180,7 +180,7 @@ for x, y, z in EARS:
 # ---------- glued sensor module ----------
 COVER_TOP = 5.0
 WINDOW_CLEAR_LID = 0.1
-GLUE_GAP = 0.15
+GLUE_GAP = 0.0              # flat: cover and tube block clamp straight onto the PCB
 GRID_DEPTH = 0.4
 TAB_D = 6.8
 SHOULDER = 3.6
