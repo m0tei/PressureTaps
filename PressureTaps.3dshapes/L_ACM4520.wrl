@@ -1,0 +1,12 @@
+#VRML V2.0 utf8
+# TDK ACM4520 body from published 4.7 x 4.5 x 2 mm size, simple block, not a manufacturer model
+Shape { appearance Appearance { material Material { diffuseColor 0.12 0.12 0.13 specularColor 0.2 0.2 0.2 shininess 0.4 } }
+ geometry IndexedFaceSet { solid FALSE creaseAngle 0.5 coord Coordinate { point [ -0.8858 -0.9252 0.0394, 0.8858 -0.9252 0.0394, -0.8858 0.9252 0.0394, 0.8858 0.9252 0.0394, -0.8858 -0.9252 0.7874, 0.8858 -0.9252 0.7874, -0.8858 0.9252 0.7874, 0.8858 0.9252 0.7874, ] } coordIndex [ 0 1 3 2 -1, 4 6 7 5 -1, 0 4 5 1 -1, 1 5 7 3 -1, 3 7 6 2 -1, 2 6 4 0 -1, ] } }
+Shape { appearance Appearance { material Material { diffuseColor 0.8 0.75 0.55 specularColor 0.2 0.2 0.2 shininess 0.4 } }
+ geometry IndexedFaceSet { solid FALSE creaseAngle 0.5 coord Coordinate { point [ -0.5512 -1.1319 0.0000, -0.2362 -1.1319 0.0000, -0.5512 -0.7382 0.0000, -0.2362 -0.7382 0.0000, -0.5512 -1.1319 0.1181, -0.2362 -1.1319 0.1181, -0.5512 -0.7382 0.1181, -0.2362 -0.7382 0.1181, ] } coordIndex [ 0 1 3 2 -1, 4 6 7 5 -1, 0 4 5 1 -1, 1 5 7 3 -1, 3 7 6 2 -1, 2 6 4 0 -1, ] } }
+Shape { appearance Appearance { material Material { diffuseColor 0.8 0.75 0.55 specularColor 0.2 0.2 0.2 shininess 0.4 } }
+ geometry IndexedFaceSet { solid FALSE creaseAngle 0.5 coord Coordinate { point [ -0.5512 0.7382 0.0000, -0.2362 0.7382 0.0000, -0.5512 1.1319 0.0000, -0.2362 1.1319 0.0000, -0.5512 0.7382 0.1181, -0.2362 0.7382 0.1181, -0.5512 1.1319 0.1181, -0.2362 1.1319 0.1181, ] } coordIndex [ 0 1 3 2 -1, 4 6 7 5 -1, 0 4 5 1 -1, 1 5 7 3 -1, 3 7 6 2 -1, 2 6 4 0 -1, ] } }
+Shape { appearance Appearance { material Material { diffuseColor 0.8 0.75 0.55 specularColor 0.2 0.2 0.2 shininess 0.4 } }
+ geometry IndexedFaceSet { solid FALSE creaseAngle 0.5 coord Coordinate { point [ 0.2362 -1.1319 0.0000, 0.5512 -1.1319 0.0000, 0.2362 -0.7382 0.0000, 0.5512 -0.7382 0.0000, 0.2362 -1.1319 0.1181, 0.5512 -1.1319 0.1181, 0.2362 -0.7382 0.1181, 0.5512 -0.7382 0.1181, ] } coordIndex [ 0 1 3 2 -1, 4 6 7 5 -1, 0 4 5 1 -1, 1 5 7 3 -1, 3 7 6 2 -1, 2 6 4 0 -1, ] } }
+Shape { appearance Appearance { material Material { diffuseColor 0.8 0.75 0.55 specularColor 0.2 0.2 0.2 shininess 0.4 } }
+ geometry IndexedFaceSet { solid FALSE creaseAngle 0.5 coord Coordinate { point [ 0.2362 0.7382 0.0000, 0.5512 0.7382 0.0000, 0.2362 1.1319 0.0000, 0.5512 1.1319 0.0000, 0.2362 0.7382 0.1181, 0.5512 0.7382 0.1181, 0.2362 1.1319 0.1181, 0.5512 1.1319 0.1181, ] } coordIndex [ 0 1 3 2 -1, 4 6 7 5 -1, 0 4 5 1 -1, 1 5 7 3 -1, 3 7 6 2 -1, 2 6 4 0 -1, ] } }
