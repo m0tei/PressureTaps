@@ -1,6 +1,6 @@
 #!/usr/bin/env python3
-"""PressureTaps alternative enclosure: a sensor module glued to the PCB, pressed into a separate case.
-Needs cadquery. Usage: enclosure_alt.py OUTPUT_DIR
+"""PressureTaps enclosure: a sensor module glued to the PCB, pressed into a separate case.
+Needs cadquery. Usage: enclosure.py OUTPUT_DIR
 Model origin = centre of the 4 x 4 sensor grid, board (128.5, 125). Z = 0 is the PCB top face.
 Ampseal data from TE drawing 2489696 and application spec 114-160220.
 
@@ -39,7 +39,7 @@ def interp(pts, x):
     return pts[-1][1]
 
 # Board
-BX1, BX2, BY1, BY2 = 105.9, 192.0, 100.0, 152.0
+BX1, BX2, BY1, BY2 = 105.9, 192.0, 100.0, 150.0
 PCB_T = 1.6
 # Ampseal 2489696-1 on the back of the right edge; numbers scaled from TE section A-A
 JY = 129.0
@@ -81,8 +81,8 @@ CAV_R = 3.0
 ROOF_Z = 2.8
 CELLS = [(115 + 9 * (i % 4), 111.5 + 9 * (i // 4), str(i + 1)) for i in range(16)] + [(151, 125, "REF")]
 PLUG = [(111.1, 106.4), (147.1, 106.4), (147.1, 119.9), (156.1, 119.9), (156.1, 130.1),
-        (147.1, 130.1), (147.1, 143.6), (109.9, 143.6), (109.9, 107.6)]
-H = {"H1": (109.7, 103.8), "H2": (188.2, 103.8), "H3": (109.7, 148.2), "H4": (188.2, 148.2),
+        (147.1, 130.1), (147.1, 143.6), (111.1, 143.6), (109.9, 142.4), (109.9, 107.6)]
+H = {"H1": (109.7, 103.8), "H2": (188.2, 103.8), "H3": (109.7, 146.2), "H4": (188.2, 146.2),
      "H5": (119.5, 103.4), "H6": (143.5, 103.4), "H7": (119.5, 146.6), "H8": (143.5, 146.6)}
 # Tube barbs for 1.6 mm ID tube
 BARB_LEN, BARB_D, STEM_D, BORE = 7.0, 2.3, 1.9, 1.0
@@ -167,8 +167,7 @@ def cells(w, z1, z2):
     return w
 for k in ("H1", "H3"):
     top = top.union(cyl(*H[k], 5.0, 0, CEIL + 0.1))
-for k in ("H2", "H4"):
-    top = top.union(cyl(*H[k], 6.0, 0, CEIL + 0.1))
+top = top.union(cyl(*H["H2"], 6.0, 0, CEIL + 0.1))     # none at H4: the Ampseal rear lobes sit there
 for x, y, t in CELLS:
     size = 3.0 if t == "REF" else 3.6
     top = top.cut(cq.Workplane("XY").workplane(offset=LID_TOP - 0.3).center(*p(x, y)).text(t, size, 0.4, combine=False, kind="bold"))
@@ -205,6 +204,7 @@ for k in CLAMP:
 
 # blind socket in the lid
 rib = cover_spigot(RIB_LOW, CEIL + 0.1, WINDOW_CLEAR_LID + RIB_T).cut(cover_spigot(RIB_LOW - 1, CEIL + 1, WINDOW_CLEAR_LID))
+top = top.cut(box(194.8, CAV_X2, 147.0, BY2 - 0.4, -4.0, 5.0))     # relief, the Ampseal flange corner clears the rounded cavity corner
 top = top.union(rib).cut(cover_spigot(CEIL - 0.01, LID_POCKET, WINDOW_CLEAR_LID))
 
 grid_top = -PCB_T - GLUE_GAP

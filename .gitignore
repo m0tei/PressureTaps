@@ -17,3 +17,6 @@ _autosave-*
 
 # macOS
 .DS_Store
+
+# KiCad local history snapshots
+.history/
